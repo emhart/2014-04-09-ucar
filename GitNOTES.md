@@ -5,7 +5,7 @@ Branching
 
 - Have student checkout branch
 
--  Show shortcut... `git checkout -b <branchname>`
+- Show shortcut... `git checkout -b <branchname>`
 
 - Have students switch branches.  Make a change, commit.
 
@@ -65,6 +65,10 @@ Resetting work
  
 `git reset --soft HEAD` 
 
+`git reset --soft <commit>` will roll back to a commit but keep your changes
+
+`git reset --hard <commit>` will roll back to those commits and you will lose the modified file
+
 - See how it just goes back to modified files
 
 - But it doesn't work if you go back to what you were at.
@@ -73,11 +77,24 @@ Resetting work
 
 - Have the students try and push. Do they get conflicts?
 
+- Try resetting work, Try with a soft reset.  Try with a hard reset
+
+- Now try pushing this up to github.  What happens?
+
+
+
+`reverting`
+---- 
+
+`git revert <commit>` will merge changes from the branch and append it to your history.
+
+Have students look at git log.  What's the difference?
+
 
 -----
 - Another easy way to do this is with checkout.
 
-`git checkout -b <new branch name> <commitID>
+`git checkout -b <new branch name> <commitID>`
 
 Now you can play around, and merge that back into master...
 
